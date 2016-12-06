@@ -10,7 +10,9 @@ Usage
 
 ``insyncerator`` has just one entrypoint, the ``Sync`` class.  To use it,
 assign an instance of ``Sync`` as class attribute of a type with ``async def``
-methods::
+methods
+
+.. code-block:: python
 
   import asyncio
   from insyncerator import Sync
@@ -24,7 +26,7 @@ methods::
           await asyncio.sleep(1)
           return x
 
-      sync = Sync()
+      sync = Sync()  # This is the important line.
 
 Normally, if we wanted to test ``get_x`` in the Python REPL, we would have to
 do so like this::
