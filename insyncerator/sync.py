@@ -13,7 +13,7 @@ class Sync:
     def __set__(self, instance, owner, value):
         raise AttributeError("Can't set into Sync objects.")
 
-    def __del__(self, instance, owner):
+    def __delete__(self, instance, owner):
         raise AttributeError("Can't set into Sync objects.")
 
 
